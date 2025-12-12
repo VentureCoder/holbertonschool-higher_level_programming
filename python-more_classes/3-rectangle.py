@@ -4,6 +4,7 @@
 
 class Rectangle:
     """Defines a rectangle by width and height."""
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -43,4 +44,4 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\\n".join(["#" * self.__width for _ in range(self.__height)])
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
