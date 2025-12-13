@@ -1,5 +1,9 @@
-Tests for BaseGeometry.integer_validator
+Tests for BaseGeometry (task 7)
 
+This doctest supports running from the repo root by adding python-inheritance to sys.path.
+
+>>> import sys
+>>> sys.path.append("python-inheritance")
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 >>> bg = BaseGeometry()
 
@@ -31,3 +35,9 @@ Boolean is invalid:
 >>> bg.integer_validator("flag", True)
 Traceback (most recent call last):
 TypeError: flag must be an integer
+
+area() is not implemented:
+
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
