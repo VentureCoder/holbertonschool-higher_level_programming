@@ -3,6 +3,16 @@ Tests for BaseGeometry (task 7)
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 >>> bg = BaseGeometry()
 
+Missing arguments (must be tested):
+
+>>> bg.integer_validator()  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+TypeError: ...
+
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+TypeError: age must be an integer
+
 Valid integers:
 
 >>> bg.integer_validator("my_int", 12)
@@ -30,10 +40,6 @@ TypeError: age must be an integer
 Traceback (most recent call last):
 TypeError: age must be an integer
 
->>> bg.integer_validator("age", True)
-Traceback (most recent call last):
-TypeError: age must be an integer
-
 Value errors:
 
 >>> bg.integer_validator("age", 0)
@@ -43,6 +49,10 @@ ValueError: age must be greater than 0
 >>> bg.integer_validator("age", -4)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
+
+Bool is accepted (True is an int in Python):
+
+>>> bg.integer_validator("age", True)
 
 area() is not implemented:
 
