@@ -1,9 +1,5 @@
 Tests for BaseGeometry (task 7)
 
-This doctest supports running from the repo root by adding python-inheritance to sys.path.
-
->>> import sys
->>> sys.path.append("python-inheritance")
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 >>> bg = BaseGeometry()
 
